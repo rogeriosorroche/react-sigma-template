@@ -1,0 +1,26 @@
+//Suggested location to add your overrides so that migration would be easy by just updating the SASS folder in the future
+
+$scrollbarTrackColor:#C7CBD6;
+$scrollbarThumbColor:#717788;
+
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: $scrollbarTrackColor $scrollbarThumbColor;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: $scrollbarTrackColor;
+  filter: brightness(1.75);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: $scrollbarThumbColor;
+  border-radius: 20px;
+  border: 2px solid $scrollbarTrackColor;
+}
